@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
     ul.appendChild(li);
   });
 
+
+  /*
+  To delete list items of the unordered list when we click them we will use event delegation for the dynamically created elements.
+  With this, you only need one event listener on the ul#list and it will work for all elements you dynamically attach to it.
+  */
   ul.addEventListener("click",function(e){
     if(e.target && e.target.matches("li.ta")){
       e.target.id = "del";
@@ -17,5 +22,4 @@ document.addEventListener("DOMContentLoaded", () => {
       ul.removeChild(d);
     }
   })
-
 });
