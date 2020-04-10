@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   // your code here
 });
-let test = 2;
+document.getElementById("submit").addEventListener("click", function(event) {
+  event.preventDefault();
+}, false);
